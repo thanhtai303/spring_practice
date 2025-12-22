@@ -1,0 +1,1 @@
+CREATE INDEX idx_users_delete_flag ON users (delete_flag);
