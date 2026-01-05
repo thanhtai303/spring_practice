@@ -77,4 +77,10 @@ public class UserServiceImpl implements UserService {
         userMapper.softDelete(id, currentUser, LocalDateTime.now());
         return new ResponseObject<>("SUCCESS", "User deleted successfully", null);
     }
+
+    @Override
+    public ResponseObject<User> getUserByEmail(String email) {
+        User user = userMapper.findByEmail(email);
+        return new ResponseObject<>("SUCCESS", "Get user successfully", user);
+    }
 }

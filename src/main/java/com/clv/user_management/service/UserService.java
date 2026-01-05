@@ -12,6 +12,8 @@ public interface UserService {
 
     ResponseObject<User> getUserById(Long id);
 
+    ResponseObject<User> getUserByEmail(String email);
+
     ResponseObject<Void> createUser(CreateUserRequest createUserRequest, String currentUser);
 
     ResponseObject<Void> updateUser(Long id, UpdateUserRequest request, String currentUser);
